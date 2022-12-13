@@ -3,26 +3,28 @@ pipeline {
   stages {
     stage('setup'){
       steps {
-        dir("$WORKSPACE/calculator") {
-          sh 'chmod +x gradlew'
-        }
+        sh 'ls -al'
+        // sh 'chmod +x gradlew'
+        // dir("$WORKSPACE/calculator") {
+          
+        // }
       }
     } 
 
-    stage('Build'){
-      steps {
-        dir("$WORKSPACE/calculator") {
-          sh './gradlew compileJava'
-        }
-      }
-    }
+    // stage('Build'){
+    //   steps {
+    //     dir("$WORKSPACE/calculator") {
+    //       sh './gradlew compileJava'
+    //     }
+    //   }
+    // }
 
-    stage('Test'){
-      steps {
-        dir("$WORKSPACE/calculator") {
-          sh './gradlew test'
-        }
-      }
-    }
+    // stage('Test'){
+    //   steps {
+    //     dir("$WORKSPACE/calculator") {
+    //       sh './gradlew test'
+    //     }
+    //   }
+    // }
   }
 }
